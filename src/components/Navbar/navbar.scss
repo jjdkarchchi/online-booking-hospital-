@@ -1,0 +1,150 @@
+/*colors*/
+:root{
+    --primaryColor:hsl(26,93%,50%);
+    --HoverColor:hsl(26,93%,42%);
+    --WhiteColor:hsl(0,0%,100%);
+    --blackColor:hsl(0,0%,18%);
+    --textColor:hsl(240,1%,48%);
+    --whiteColorDeam:hsl(0,0%,93%);
+    --greyBg:hsl(0,0%,96%);
+    --greyText:rgb(190,190,190);
+    --inputColor:hsl(330,12%,92%);
+
+}
+.navbarsection{
+    .header{
+       position: fixed;
+       display: flex;align-items: center;
+     justify-content: space-between;
+     background: transparent;
+     width: 100%;
+   padding: 1rem;
+   z-index: 1000;
+
+   .logoDiv{
+    .logo{
+       color: var(--WhiteColor);
+       font-weight: 500;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+
+      .icon{
+       
+        color: var(--primaryColor);
+        font-size: 25px;
+      }
+
+      
+
+     
+    }
+
+
+   }
+   
+   @media screen and (max-width:760px){
+
+    .navbar{
+        background: var(--greyBg);
+        position: absolute;
+        height: max-content;
+        padding: 1rem;
+        width: 100%;
+        top: 0;
+        left: 500%;
+        box-shadow: 0 2px 4px rgba(200,200, 200, 0, 900);
+        transition:  5s ease;
+        z-index: 1000;
+
+
+        .navList{
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin: auto;
+        }
+
+        .closeNavbar{
+         position: absolute;
+         top: 1rem;
+         right: 3.5rem;
+         color: var(--primaryColor);
+         &:hover.icon
+         {
+          color: var( --hoverColon);
+        }
+        }
+
+        .navItem{
+            padding: 1rem 0;//on the wide screen padding shout be : 1 1rem ;
+
+            .navLink{
+                color: var(--textColor);
+                font-size: .9rem;
+                font-weight: 600;
+                &:hover{
+                    color: var(--primaryColor);
+                }
+            
+            }
+
+             
+        }
+        .headerBtns{
+            flex-direction: column;
+            .btn{
+                margin-top: 1rem;
+
+            a{
+                font-weight: 600;
+
+                  &:hover{
+                    color: var(--WhiteColor);
+                  }
+
+            }
+            }
+
+            .loginBtn{
+
+                background: none;
+                border: 1px solid var(--primaryColor);
+
+                a{
+                    color:  var(--primaryColor);
+
+
+                }
+                 &:hover{
+                    background: var(--HoverColor);
+
+                    a{
+                        color: var(--WhiteColor);
+                    }
+                 }
+
+            }
+        }
+
+    }
+
+    .activeNavbar{
+        left: 0;
+
+    }
+    
+   }
+   .toggleNavbar{
+    .icon{
+        font-size: 25px;
+        color: var(--WhiteColor);
+        &:hover{
+            color: var(--primaryColor);
+        }
+    }
+
+   }
+    }
+
+}
